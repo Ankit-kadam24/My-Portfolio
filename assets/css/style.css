@@ -15,8 +15,9 @@ body {
 a {
   color: #149ddd;
 }
-.download{
- margin-top: 5px;
+
+.download {
+  margin-top: 5px;
 }
 
 
@@ -25,7 +26,12 @@ a:hover {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Raleway", sans-serif;
 }
 
@@ -114,7 +120,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", sans-serif;
 }
 
-#header .profile h1 a, #header .profile h1 a:hover {
+#header .profile h1 a,
+#header .profile h1 a:hover {
   color: #fff;
   text-decoration: none;
 }
@@ -148,6 +155,7 @@ h1, h2, h3, h4, h5, h6 {
   #header {
     left: -300px;
   }
+
   #main {
     margin-left: 0;
   }
@@ -167,7 +175,7 @@ h1, h2, h3, h4, h5, h6 {
   list-style: none;
 }
 
-.nav-menu > ul > li {
+.nav-menu>ul>li {
   position: relative;
   white-space: nowrap;
 }
@@ -188,12 +196,16 @@ h1, h2, h3, h4, h5, h6 {
   color: #6f7180;
 }
 
-.nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
+.nav-menu a:hover,
+.nav-menu .active>a,
+.nav-menu li:hover>a {
   text-decoration: none;
   color: #fff;
 }
 
-.nav-menu a:hover i, .nav-menu .active > a i, .nav-menu li:hover > a i {
+.nav-menu a:hover i,
+.nav-menu .active>a i,
+.nav-menu li:hover>a i {
   color: #149ddd;
 }
 
@@ -289,6 +301,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 28px;
     line-height: 36px;
   }
+
   #hero h2 {
     font-size: 18px;
     line-height: 24px;
@@ -364,10 +377,11 @@ section {
   margin-bottom: 0;
 }
 
-.about img{
+.about img {
   width: 100%;
-  
+
 }
+
 .contents h3 {
   font-weight: 700;
   font-size: 26px;
@@ -375,15 +389,15 @@ section {
   text-align: center;
 }
 
-.icons{
-  color: #1f5297; 
-    font-size: 40pt;
-   left: 38%;
-     /* position: absolute;  */
-    right: 35%;
-    padding-top: 10px;
-    /* z-index: 1; */
-  
+.icons {
+  color: #1f5297;
+  font-size: 40pt;
+  left: 38%;
+  /* position: absolute;  */
+  right: 35%;
+  padding-top: 10px;
+  /* z-index: 1; */
+
 }
 
 /*--------------------------------------------------------------
@@ -481,10 +495,11 @@ section {
   margin-bottom: 20px;
   color: #050d18;
 }
-.columns{
+
+.columns {
   padding-top: auto;
   padding-bottom: auto;
- }
+}
 
 .resume .resume-item {
   padding: 0 0 20px 20px;
@@ -492,6 +507,63 @@ section {
   border-left: 2px solid #1f5297;
   position: relative;
 }
+
+/* // ------------------------------------------- Changes by Ak - 2023-02-08 14:28:25 */
+.resume .resume-itemNew {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-top: 2px solid #1f5297;
+  position: relative;
+}
+
+.resume .resume-itemNew h4 {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #050d18;
+  margin-bottom: 10px;
+}
+
+.resume .resume-itemNew h5 {
+  font-size: 16px;
+  background: #e4edf9;
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.resume .resume-itemNew ul {
+  padding-left: 20px;
+}
+
+.resume .resume-itemNew ul li {
+  padding-bottom: 10px;
+}
+
+.resume .resume-itemNew:last-child {
+  padding-bottom: 0;
+}
+
+.resume .resume-itemNew::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: -9px;
+  background: #fff;
+  border: 2px solid #1f5297;
+}
+
+.resume .resume-colNew {
+  display: flex;
+}
+
+/* // ------------------------------------------- End */
 
 .resume .resume-item h4 {
   line-height: 18px;
@@ -609,7 +681,9 @@ section {
   color: #fff;
 }
 
-.contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
+.contact .info .email:hover i,
+.contact .info .address:hover i,
+.contact .info .phone:hover i {
   background: #149ddd;
   color: #fff;
 }
@@ -642,7 +716,7 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br + br {
+.contact .php-email-form .error-message br+br {
   margin-top: 25px;
 }
 
@@ -675,7 +749,8 @@ section {
   animation: animate-loading 1s linear infinite;
 }
 
-.contact .php-email-form input, .contact .php-email-form textarea {
+.contact .php-email-form input,
+.contact .php-email-form textarea {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
@@ -706,6 +781,7 @@ section {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -715,6 +791,7 @@ section {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -742,11 +819,11 @@ section {
   font-size: 15px;
 }
 
-.breadcrumbs ol li + li {
+.breadcrumbs ol li+li {
   padding-left: 10px;
 }
 
-.breadcrumbs ol li + li::before {
+.breadcrumbs ol li+li::before {
   display: inline-block;
   padding-right: 10px;
   color: #0e2442;
@@ -757,9 +834,11 @@ section {
   .breadcrumbs .d-flex {
     display: block !important;
   }
+
   .breadcrumbs ol {
     display: block;
   }
+
   .breadcrumbs ol li {
     display: inline-block;
   }
@@ -781,7 +860,8 @@ section {
   z-index: 1;
 }
 
-.portfolio-details .portfolio-details-carousel .owl-nav, .portfolio-details .portfolio-details-carousel .owl-dots {
+.portfolio-details .portfolio-details-carousel .owl-nav,
+.portfolio-details .portfolio-details-carousel .owl-dots {
   margin-top: 5px;
   text-align: left;
 }
@@ -823,7 +903,7 @@ section {
   font-size: 15px;
 }
 
-.portfolio-details .portfolio-info ul li + li {
+.portfolio-details .portfolio-info ul li+li {
   margin-top: 10px;
 }
 
@@ -846,6 +926,7 @@ section {
   .portfolio-details .portfolio-description h2 {
     width: 100%;
   }
+
   .portfolio-details .portfolio-info {
     position: static;
     margin-top: 30px;
