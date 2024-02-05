@@ -10,7 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/fevicon_new2-modified.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -39,6 +39,9 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+  <!-- Template JavaScrip File -->
+  <script src="assets/js/script.js"></script>
+
   <!-- =======================================================
   * Template Name: Ankit Kadam Portfolio
   * Author: Mr. Ankit Kadam
@@ -55,7 +58,7 @@
     <div class="d-flex flex-column">
 
       <div class="profile">
-        <img src="assets/img/profile-img2.jpeg" alt="" class="img-fluid rounded-circle">
+        <img src="assets/img/IMG-20240106-WA0008.png" alt="" class="img-fluid rounded-circle">
         <h1 class="text-light"><a href="index.html">Ankit Kadam</a></h1>
         <div class="social-links mt-3 text-center">
           <a href="https://github.com/Ankit-kadam24" class="github"><i class="bx bxl-github"></i></a>
@@ -109,7 +112,7 @@
 
         <div class="row">
           <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/profile-img2.jpeg" class="img-fluid" alt="Ankit kadam">
+            <img src="assets/img/IMG-20240106-WA0008.png" class="img-fluid" alt="Ankit kadam">
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
             <h3> Web Developer, Software Developer & UI/UX Designer .</h3>
@@ -131,7 +134,7 @@
               </div>
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="icofont-rounded-right"></i> <strong>Age:</strong> 24</li>
+                  <li><i class="icofont-rounded-right"></i> <strong>Age:</strong> <span id="age"></span></li>
                   <li><i class="icofont-rounded-right"></i> <strong>Degree:</strong> Masters of Computer Applications
                   </li>
                   <li><i class="icofont-rounded-right"></i> <strong>Email:</strong> ankitkadam63@gmail.com </li>
@@ -316,7 +319,7 @@
             <h3 class="resume-title">Sumary</h3>
             <div class="resume-item pb-0">
               <h4>Ankit kadam</h4>
-              <p><em>Innovative and deadline-driven web developer with 5 Months of experience designing and developing
+              <p><em>Innovative and deadline-driven web developer with <span id="experience"></span> of experience designing and developing
                   user-centered Websites .</em></p>
               <ul>
                 <li>Mumbai, Maharashtra</li>
@@ -505,43 +508,43 @@
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="assets/img/Certificate/Angular essential Training_LinkedIn Learning Certificate/Angular essential Training_LinkedIn Learning Certificate-1.png"
-                class="gallery-lightbox" data-gall="gallery-item" target="_blank">
+              <!-- <a href="assets/img/Certificate/Angular essential Training_LinkedIn Learning Certificate/Angular essential Training_LinkedIn Learning Certificate-1.png"
+                class="gallery-lightbox" data-gall="gallery-item"> -->
                 <img
                   src="assets/img/Certificate/Angular essential Training_LinkedIn Learning Certificate/Angular essential Training_LinkedIn Learning Certificate-1.png"
                   alt="" class="img-fluid">
-              </a>
+              <!-- </a> -->
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="assets/img/Certificate/certificate of WordPress/certificate of WordPress-1.png"
-                class="gallery-lightbox" data-gall="gallery-item" target="_blank">
+              <!-- <a href="assets/img/Certificate/certificate of WordPress/certificate of WordPress-1.png"
+                class="gallery-lightbox" data-gall="gallery-item"> -->
                 <img src="assets/img/Certificate/certificate of WordPress/certificate of WordPress-1.png" alt=""
                   class="img-fluid">
-              </a>
+              <!-- </a> -->
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="assets/img/Certificate/Git essential training_LinkedIn Learning Certificate/Git essential training_LinkedIn Learning Certificate-1.png"
-                class="gallery-lightbox" data-gall="gallery-item" target="_blank">
+              <!-- <a href="assets/img/Certificate/Git essential training_LinkedIn Learning Certificate/Git essential training_LinkedIn Learning Certificate-1.png"
+                class="gallery-lightbox" data-gall="gallery-item"> -->
                 <img
                   src="assets/img/Certificate/Git essential training_LinkedIn Learning Certificate/Git essential training_LinkedIn Learning Certificate-1.png"
                   alt="" class="img-fluid">
-              </a>
+              <!-- </a> -->
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="assets/img/Certificate/1964528-Ankit Kadam(TCS)/1964528-Ankit Kadam(TCS)-1.png"
-                class="gallery-lightbox" data-gall="gallery-item" target="_blank">
+              <!-- <a href="assets/img/Certificate/1964528-Ankit Kadam(TCS)/1964528-Ankit Kadam(TCS)-1.png"
+                class="gallery-lightbox" data-gall="gallery-item"> -->
                 <img src="assets/img/Certificate/1964528-Ankit Kadam(TCS)/1964528-Ankit Kadam(TCS)-1.png" alt=""
                   class="img-fluid">
-              </a>
+              <!-- </a> -->
             </div>
           </div>
 
@@ -566,7 +569,7 @@
               <div class="address">
                 <i class="icofont-google-map"></i>
                 <h4>Location:</h4>
-                <p>201, Jain niwas Apt., Tulinj Road<br>
+                <p>B-26, Om Shruti CHSL,B wing, Second floor,Sainath Nagar, Tulinj Road<br>
                   Nallasopara (E), Maharashtra, 401209</p>
               </div>
 
@@ -581,9 +584,11 @@
                 <h4>Call:</h4>
                 <p>+91 9284906112</p>
               </div>
-              <iframe
+              <!-- <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.7007448214736!2d72.82503801470263!3d19.425331745947194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7a9d88b47ab0b%3A0xc8d1db6adacee96e!2sJain%20niwas%20apartment!5e0!3m2!1sen!2sin!4v1626241309491!5m2!1sen!2sin"
-                frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+                frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe> -->
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.8320254653713!2d72.82112597467344!3d19.419662341094988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7a94137027275%3A0x924c580225a44ce6!2sOm%20Shruti%20Co-Operative%20Housing%20Society!5e0!3m2!1sen!2sin!4v1707131557578!5m2!1sen!2sin" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
 
             </div>
 
@@ -637,7 +642,7 @@
   <footer id="footer">
     <div class="container">
       <div class="copyright">
-        &copy; Copyright_2021 <strong><span></span></strong>
+        &copy; Copyright_<strong><span id="currentYear"></span></strong>
       </div>
       <div class="credits">
 

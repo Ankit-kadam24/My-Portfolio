@@ -247,7 +247,7 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/hero-bg5.png") top center;
+  background: url("../img/imge_2.jpeg") top center;
   background-size: cover;
 }
 
@@ -965,4 +965,66 @@ section {
     width: auto;
     padding-right: 20px 15px;
   }
+}
+
+
+
+
+
+/* Gallery New */
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox-content {
+  margin: auto;
+  display: block;
+  max-width: 700px;
+  max-height: 500px;
+}
+
+.lightbox img {
+  width: 100%;
+  height: auto;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 600px) {
+  .close {
+      top: 5px;
+      right: 5px;
+      font-size: 30px;
+  }
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
 }
