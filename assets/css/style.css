@@ -251,6 +251,14 @@ h6 {
   background-size: cover;
 }
 
+/* Media query for screens with a maximum width of 767px (typical for mobile devices) */
+@media only screen and (max-width: 767px) {
+  #hero {
+    background: url("../img/IMG-20240106-WA0008.jpg") top center;
+    background-size: cover !important;
+    /* Add additional styles as needed for the mobile version */
+  }
+}
 #hero:before {
   content: "";
   background: rgba(5, 13, 24, 0.3);
