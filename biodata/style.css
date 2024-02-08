@@ -231,3 +231,30 @@ input:checked+.slider:before {
     cursor: pointer;
 }
 
+/* pdf button CSS */
+
+#pdfButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* Custom Location Icons */
+.customIcon {
+    background: #007bff;
+    border: solid 1px;
+    float: right;
+    padding: 3px;
+    /* margin-bottom: -13px !important; */
+    size: 3px;
+    color: white;
+    content: ".";
+    cursor: pointer;
+}

@@ -12,12 +12,26 @@
   <!-- Favicons -->
   <link href="../assets/img/fevicon_new2-modified.png" rel="icon">
   <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha256-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css"> <!-- You can create a separate CSS file and link it here -->
-    <script src="script.js"></script>
+  
+  <!-- icofont for icons -->
+  <link href="../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+
+  
+<!-- Include the html2pdf library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
+<!-- Google Material UI -->
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" /> -->
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+
+
+
+  <link rel="stylesheet" href="style.css"> <!-- You can create a separate CSS file and link it here -->
+  <script src="script.js"></script>
 </head>
 
 <body>
+    <div id="content">
     <header>
         <label class="switch">
             <input type="checkbox" id="languageCheck" onclick="myFunction()">
@@ -64,7 +78,7 @@
         </tr>
         <tr>
             <th data-translation-key="labelAddress"></th>
-            <td data-translation-key="address"></td>
+            <td data-translation-key="address" id="locationCity"></td>
         </tr>
         <tr>
             <th data-translation-key="labelEdu"></th>
@@ -123,6 +137,7 @@
             <td data-translation-key="mobileNo" onclick="redirectToDialPad('123456789')"></td>
         </tr>
     </table>
+    </div>
 
     <!-- <button id="translateBtn" onclick="translateToMarathi()">Translate to Marathi</button> -->
 
@@ -130,6 +145,11 @@
         <a href="path-to-your-first-pdf.pdf" target="_blank">View PDF 1</a>
         <a href="path-to-your-second-pdf.pdf" target="_blank">View PDF 2</a>
     </div> -->
+    <!-- <button onclick="downloadPDF()" id="pdfButton">Download PDF</button> -->
+    <button id="pdfButton" onclick="downloadPDF()" title="Download">
+        <!-- <i class="material-symbols-outlined">download</i> -->
+        <i class="icofont-download"></i>
+    </button>
 </body>
 
 </html>

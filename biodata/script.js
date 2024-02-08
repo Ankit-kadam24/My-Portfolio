@@ -1,37 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
-    var checkBox = document.getElementById("languageCheck");
-    var location = document.getElementById("locationKadoli");
-    // Get the output text
-    // var text = document.getElementById("text");
-
-    // If the checkbox is checked, display the output text
-    // if (checkBox.checked == true) {
-    //     //   text.style.display = "block";
-    //     translateLang('mr');
-    // } else {
-    //     translateLang('en');
-    //     //   text.style.display = "none";
-    // }
-
-
-    //To Set Marathi as defualt Language   ------Uncommet 4 lines
-    // checkBox.checked = true;
-    // translateLang('mr');
-    // checkboxText.innerHTML = "म";
-    // checkboxText.className = "lngEn slider round";
-
-
-    //To Set Marathi as defualt Language   ------Uncommet 4 lines
-    checkBox.checked = false;
-    translateLang('en');
-    checkboxText.innerHTML = "En";
-    checkboxText.className = "lngMr slider round";
-
-    location.innerHTML += '<i class="fa-solid fa-location-dot"></i>';
-
-
-
-});
 var translations = {
     lableName: {
         en: "Name",
@@ -212,6 +178,45 @@ var translations = {
     }
     // Add more translation keys as needed
 };
+document.addEventListener('DOMContentLoaded', function () {
+    var checkBox = document.getElementById("languageCheck");
+    
+    // If the checkbox is checked, display the output text
+    // if (checkBox.checked == true) {
+    //     //   text.style.display = "block";
+    //     translateLang('mr');
+    // } else {
+    //     translateLang('en');
+    //     //   text.style.display = "none";
+    // }
+
+
+    //To Set Marathi as defualt Language   ------Uncommet 4 lines
+        // checkBox.checked = true;
+        // translateLang('mr');
+        // checkboxText.innerHTML = "म";
+        // checkboxText.className = "lngEn slider round";
+
+
+    //To Set Marathi as defualt Language   ------Uncommet 4 lines
+        checkBox.checked = false;
+        translateLang('en');
+        checkboxText.innerHTML = "En";
+        checkboxText.className = "lngMr slider round";
+
+
+    // Need to Run always when page loads
+    setLocationIcons();
+
+});
+
+function setLocationIcons(){
+    var villageLocation = document.getElementById("locationKadoli");
+    var cityLocation = document.getElementById("locationCity");
+    villageLocation.innerHTML += '<i class="icofont-location-pin customIcon" onClick="redirectToGoogleMAp(1)"></i>';
+    cityLocation.innerHTML += '<i class="icofont-location-pin customIcon" onClick="redirectToGoogleMAp(2)"></i>';
+}
+
 
 function translateLang(language) {
     var elements = document.querySelectorAll('[data-translation-key]');
@@ -237,10 +242,12 @@ function myFunction() {
         translateLang('mr');
         checkboxText.innerHTML = "म";
         checkboxText.className = "lngEn slider round";
+        setLocationIcons();
     } else {
         translateLang('en');
         checkboxText.innerHTML = "En";
         checkboxText.className = "lngMr slider round";
+        setLocationIcons();
         //   text.style.display = "none";
     }
 }
@@ -260,7 +267,34 @@ function redirectToDialPad(phoneNumber) {
     window.location.href = 'tel:' + phoneNumber;
 }
 
+// toRedirect on google map
 function redirectToGoogleMAp(link) {
     // window.location.href = ''
-    window.open(link, '_blank')
+
+    if(link == 1){
+        window,open('https://maps.app.goo.gl/sYqWAyh8t4t17xWx9','_blank')
+    }else if(link == 2){
+        window.open('https://maps.app.goo.gl/ujySDZPH3Wvn8v1R8', '_blank')
+    }else {
+        console.log("No Link Found");
+    }
+}
+
+// to downoad PDF
+function downloadPDF() {
+    // Select the element containing the content you want to convert to PDF
+    const element = document.getElementById('content');
+
+    // Set PDF options
+    const pdfOptions = {
+        margin: 10,
+        filename: 'Biodata.pdf', // Set a custom name for the PDF file
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 3 },
+        // jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+        pagebreak: { mode: 'avoid-all', before: '.page-break' }, // Configure page breaks
+    };
+
+    // Use html2pdf library to generate PDF with options and save
+    html2pdf().from(element).set(pdfOptions).save();
 }
