@@ -12,7 +12,7 @@
   <!-- Favicons -->
   <link href="../assets/img/fevicon_new2-modified.png" rel="icon">
   <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha256-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css"> <!-- You can create a separate CSS file and link it here -->
     <script src="script.js"></script>
 </head>
@@ -24,84 +24,112 @@
             <span class="slider round" id="checkboxText"></span>
             <!-- <span >Off</span> -->
         </label>
-        <img id="profilePhoto" src="../assets//img/IMG-20240106-WA0008.png" alt="Profile Photo">
+        <img id="profilePhoto" src="../assets//img/IMG-20240106-WA0008.png" alt="Profile Photo" onclick="showLargerPhoto()">
         <h1 data-translation-key="name"></h1>
-        <h3>Software Engineer</h3>
+        <h3 data-translation-key="designation"></h3>
     </header>
 
+    <div id="largerProfilePhotoContainer" onclick="hideLargerPhoto()">
+        <img id="largerProfilePhoto" src="../assets/img/IMG-20240106-WA0008.png" alt="Larger Profile Photo">
+    </div>
     <table>
         <tr>
-            <th data-translation-key="lableName">Name</th>
+            <th data-translation-key="lableName"></th>
             <td data-translation-key="name"></td>
+        </tr>
+        <tr>
+            <th data-translation-key="lableCastReligion"></th>
+            <td data-translation-key="castReligion"></td>
         </tr>
         <tr>
             <th data-translation-key="labledob">Date of Birth</th>
             <td data-translation-key="dob">Your DOB</td>
         </tr>
-        <!-- <tr>
-            <th>Brothers</th>
-            <td>Your Brothers</td>
+       
+        <tr>
+            <th data-translation-key="labelTimeofBirth"></th>
+            <td data-translation-key="timeOfBirth"></td>
         </tr>
         <tr>
-            <th>Sisters</th>
-            <td>Your Sisters</td>
-        </tr> -->
-        <tr>
-            <th>Village</th>
-            <td>Your Village</td>
+            <th data-translation-key="labelConstellation"></th>
+            <td data-translation-key="constellation"></td>
         </tr>
         <tr>
-            <th>Village</th>
-            <td>Your Village</td>
+            <th data-translation-key="labelNName"></th>
+            <td data-translation-key="nName"></td>
         </tr>
         <tr>
-            <th>Village</th>
-            <td>Your Village</td>
+            <th data-translation-key="labelVillage"></th>
+            <td data-translation-key="village" id="locationKadoli"></td>
         </tr>
         <tr>
-            <th>Village</th>
-            <td>Your Village</td>
+            <th data-translation-key="labelAddress"></th>
+            <td data-translation-key="address"></td>
         </tr>
         <tr>
-            <th>Village</th>
-            <td>Your Village</td>
+            <th data-translation-key="labelEdu"></th>
+            <td data-translation-key="edu"></td>
         </tr>
         <tr>
-            <th>Village</th>
-            <td>Your Village</td>
+            <th data-translation-key="labelHeightColor"></th>
+            <td data-translation-key="heightColor"></td>
         </tr>
         <tr>
-            <th>Village</th>
-            <td>Your Village</td>
+            <th data-translation-key="labelFatherName"></th>
+            <td data-translation-key="fatherName"></td>
         </tr>
         <tr>
-            <th>Village</th>
-            <td>Your Village</td>
+            <th rowspan="2" data-translation-key="labelMotherName"></th>
+            <td data-translation-key="motherName"></td>
         </tr>
         <tr>
-            <th>Village</th>
-            <td>Your Village</td>
+            <!-- <th data-translation-key=""></th> -->
+            <td data-translation-key="stepMotherNme"></td>
         </tr>
         <tr>
-            <th>Village</th>
-            <td>Your Village</td>
+            <th data-translation-key="labelBrother"></th>
+            <td data-translation-key="brother"></td>
         </tr>
         <tr>
-            <th>Village</th>
-            <td>Your Village</td>
+            <th rowspan="3" data-translation-key="labelSisters"></th>
+            <td data-translation-key="sistersOne"></td>
         </tr>
         <tr>
-            <th>Village</th>
-            <td>Your Village</td>
+            <!-- <th data-translation-key=""></th> -->
+            <td data-translation-key="sisterTwo"></td>
+        </tr>
+        <tr>
+            <!-- <th data-translation-key=""></th> -->
+            <td data-translation-key="sisterThree"></td>
+        </tr>
+        <tr>
+            <th rowspan="3" data-translation-key="labelRelativesName"></th>
+            <td data-translation-key="relativeNameOne"></td>
+        </tr>
+        <tr>
+            <!-- <th data-translation-key=""></th> -->
+            <td data-translation-key="relativeNameTwo"></td>
+        </tr>
+        <tr>
+            <!-- <th data-translation-key=""></th> -->
+            <td data-translation-key="relativeNameThree"></td>
+        </tr>
+        <tr>
+            <th data-translation-key="labelRelations"></th>
+            <td data-translation-key="relations"></td>
+        </tr>
+        <tr>
+            <th data-translation-key="labelMobileNo"></th>
+            <td data-translation-key="mobileNo" onclick="redirectToDialPad('123456789')"></td>
         </tr>
     </table>
 
     <!-- <button id="translateBtn" onclick="translateToMarathi()">Translate to Marathi</button> -->
 
-    <div id="pdfLinks">
+    <!-- <div id="pdfLinks">
         <a href="path-to-your-first-pdf.pdf" target="_blank">View PDF 1</a>
         <a href="path-to-your-second-pdf.pdf" target="_blank">View PDF 2</a>
-    </div>
+    </div> -->
 </body>
 
 </html>
