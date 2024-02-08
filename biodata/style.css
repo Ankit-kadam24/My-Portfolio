@@ -142,6 +142,8 @@ input:checked+.slider:before {
     font-size: 13px;
     float: left;
     font-weight: bold;
+    padding-top: 1px;
+    padding-bottom: 1px;
 }
 
 .lngMr {
@@ -149,6 +151,8 @@ input:checked+.slider:before {
     font-size: 13px;
     float: left;
     font-weight: bold;
+    padding-top: 1px;
+    padding-bottom: 1px;
 }
 
 .lngMr::before {
