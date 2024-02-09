@@ -24,9 +24,9 @@
 <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" /> -->
 <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
 
-
-
-  <link rel="stylesheet" href="style.css"> <!-- You can create a separate CSS file and link it here -->
+<!-- You can create a separate CSS file and link it here -->
+<!-- <link rel="stylesheet" href="alternate_style.css"> -->
+  <link rel="stylesheet" href="style.css"> 
   <script src="script.js"></script>
 </head>
 
@@ -38,9 +38,24 @@
             <span class="slider round" id="checkboxText"></span>
             <!-- <span >Off</span> -->
         </label>
-        <img id="profilePhoto" src="../assets//img/IMG-20240106-WA0008.png" alt="Profile Photo" onclick="showLargerPhoto()">
+        <img id="profilePhoto" src="../assets/img/IMG-20240106-WA0008.png" alt="Profile Photo" onclick="showLargerPhoto()" title="Click to view">
         <h1 data-translation-key="name"></h1>
         <h3 data-translation-key="designation"></h3>
+
+
+        <!-- Add buttons to swap profile photos -->
+        <!-- <button onclick="changeProfilePhoto('prev')" id="prevPhotoButton" title="Previous Photo">
+            <i class="icofont-arrow-left"></i>
+        </button>
+
+        <button onclick="changeProfilePhoto('next')" id="nextPhotoButton" title="Next Photo">
+            <i class="icofont-arrow-right"></i>
+        </button> -->
+
+<!-- Add a button to switch between different sets of images -->
+<!-- <button onclick="switchImageSet()" id="switchImageButton" title="Switch Profile Photo Set">
+    <i class="icofont-refresh"></i>
+</button> -->
     </header>
 
     <div id="largerProfilePhotoContainer" onclick="hideLargerPhoto()">

@@ -213,8 +213,8 @@ document.addEventListener('DOMContentLoaded', function () {
 function setLocationIcons(){
     var villageLocation = document.getElementById("locationKadoli");
     var cityLocation = document.getElementById("locationCity");
-    villageLocation.innerHTML += '<i class="icofont-location-pin customIcon" onClick="redirectToGoogleMAp(1)"></i>';
-    cityLocation.innerHTML += '<i class="icofont-location-pin customIcon" onClick="redirectToGoogleMAp(2)"></i>';
+    villageLocation.innerHTML += '<i class="icofont-location-pin customIcon" onClick="redirectToGoogleMAp(1)" title="Click to view"></i>';
+    cityLocation.innerHTML += '<i class="icofont-location-pin customIcon" onClick="redirectToGoogleMAp(2)" title="Click to view"></i>';
 }
 
 
@@ -255,10 +255,12 @@ function myFunction() {
 
 function showLargerPhoto() {
     document.getElementById("largerProfilePhotoContainer").style.display = "flex";
+    stopAutoSlide(); // Stop automatic sliding when larger photo is shown
 }
 
 function hideLargerPhoto() {
     document.getElementById("largerProfilePhotoContainer").style.display = "none";
+    startAutoSlide(); // Start automatic sliding when larger photo is hidden
 }
 
 // to open dial pad
@@ -298,3 +300,100 @@ function downloadPDF() {
     // Use html2pdf library to generate PDF with options and save
     html2pdf().from(element).set(pdfOptions).save();
 }
+
+
+// Swap Image left to right
+// Add an array of profile photo URLs
+var profilePhotos = [
+    "../assets/img/IMG-20240106-WA0008.png",
+    "../assets/img/IMG-20231230-WA0036.jpg", // Add more photo URLs as needed
+];
+
+var currentProfilePhotoIndex = 0; // Index of the current profile photo
+
+function changeProfilePhoto(direction) {
+    var profilePhoto = document.getElementById("profilePhoto");
+    var largerProfilePhoto = document.getElementById("largerProfilePhoto");
+
+    // Change the profile photo based on the direction
+    if (direction === "next") {
+        currentProfilePhotoIndex = (currentProfilePhotoIndex + 1) % profilePhotos.length;
+    } else if (direction === "prev") {
+        currentProfilePhotoIndex = (currentProfilePhotoIndex - 1 + profilePhotos.length) % profilePhotos.length;
+    }
+
+    profilePhoto.src = profilePhotos[currentProfilePhotoIndex];
+    largerProfilePhoto.src = profilePhotos[currentProfilePhotoIndex];
+}
+
+// Add this function to switch between different sets of images
+function switchImageSet() {
+    // Implement logic to change the set of profile photos
+    // For example, you can have multiple sets of photos and switch between them
+}
+
+function autoSlide() {
+    changeProfilePhoto("next");
+}
+
+function startAutoSlide() {
+    autoSlideInterval = setInterval(autoSlide, 5000); // Adjust the interval (in milliseconds)
+}
+
+function stopAutoSlide() {
+    clearInterval(autoSlideInterval);
+}
+
+// Initial delay before starting auto-slide
+startAutoSlide();
+// var profilePhotos = [
+//     "../assets/img/IMG-20240106-WA0008.png",
+//     "../assets/img/new_profile_photo.png", // Add more photo URLs as needed
+// ];
+
+// var currentProfilePhotoIndex = 0;
+// var touchStartX = 0;
+// var touchEndX = 0;
+// var threshold = 50; // Adjust the threshold as needed
+
+// function changeProfilePhotoBySlide() {
+//     if (touchEndX < touchStartX - threshold) {
+//         // Swipe left
+//         changeProfilePhoto('next');
+//     } else if (touchEndX > touchStartX + threshold) {
+//         // Swipe right
+//         changeProfilePhoto('prev');
+//     }
+// }
+
+// document.addEventListener('touchstart', function (event) {
+//     touchStartX = event.touches[0].clientX;
+// });
+
+// document.addEventListener('touchmove', function (event) {
+//     touchEndX = event.touches[0].clientX;
+// });
+
+// document.addEventListener('touchend', function () {
+//     changeProfilePhotoBySlide();
+//     touchStartX = 0;
+//     touchEndX = 0;
+// });
+
+// document.addEventListener('mousedown', function (event) {
+//     touchStartX = event.clientX;
+// });
+
+// document.addEventListener('mousemove', function (event) {
+//     if (touchStartX !== 0) {
+//         touchEndX = event.clientX;
+//     }
+// });
+
+// document.addEventListener('mouseup', function () {
+//     changeProfilePhotoBySlide();
+//     touchStartX = 0;
+//     touchEndX = 0;
+// });
+
+// // Rest of your existing code...

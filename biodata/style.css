@@ -258,3 +258,24 @@ input:checked+.slider:before {
     content: ".";
     cursor: pointer;
 }
+
+.carousel {
+    width: 300px;
+    overflow: hidden;
+    margin: auto;
+  }
+
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slide {
+    min-width: 100%;
+  }
+
+  button {
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px;
+  }
