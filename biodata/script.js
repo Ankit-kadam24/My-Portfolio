@@ -178,6 +178,10 @@ var translations = {
         en:"Mobile No.",
         mr: "मोबाईल क्र."
     },
+    labelSalarySlip: {
+        en:"Salary Proof",
+        mr: "पगाराचा पुरावा"
+    },
     mobileNo:{
         en:"+91 9833965415",
         mr:"+९१ ९८३३९६५४१५"
