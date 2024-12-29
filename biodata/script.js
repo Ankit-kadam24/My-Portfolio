@@ -151,7 +151,7 @@ var translations = {
 
     designationlbl: {
         en: "Job",
-        mr: "नोकरी."
+        mr: "नोकरी"
     },
     designationdtl: {
         en: "Runtime Solutions (P) Ltd.,Road,Andheri West Mumbai -400061",
@@ -159,7 +159,7 @@ var translations = {
     },
     salarylbl: {
         en: "Salary",
-        mr: "पगार."
+        mr: "पगार"
     },
     salarydtl: {
         en: "10,50,000 LPA",
