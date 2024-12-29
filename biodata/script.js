@@ -36,8 +36,8 @@ var translations = {
 
     },
     timeOfBirth: {
-        en: "NA",
-        mr: "NA",
+        en: "Day - wednesday, Time - 6.35AM",
+        mr: "वार - बुधवार , वेळ - सकाळी ६.३५ मि. ",
 
     },
     labelConstellation: {
@@ -45,16 +45,16 @@ var translations = {
         mr: "नक्षत्र व रास",
     },
     constellation: {
-        en:"NA",
-        mr:"NA"
+        en:"Chitra Nakshatra, Libra",
+        mr:"चित्रा नक्षत्र, तूळ रास"
     },
     labelNName: {
         en: "Name",
         mr: "नावरस नाव",
     },
     nName: {
-        en:"Ankit",
-        mr:"अंकित",
+        en:"Rahul",
+        mr:"राहुल",
     },
     labelVillage: {
         en:"Village",
@@ -148,6 +148,24 @@ var translations = {
         en:"Late. Mr. Sharad Ramchandra Deshmukh",
         mr:"कै. श्री. शरद रामचंद्र देशमुख "
     },
+
+    designationlbl: {
+        en: "Job",
+        mr: "नोकरी."
+    },
+    designationdtl: {
+        en: "Runtime Solutions (P) Ltd.,Road,Andheri West Mumbai -400061",
+        mr: "Runtime Solutions (P) Ltd.,Road,Andheri West Mumbai -400061"
+    },
+    salarylbl: {
+        en: "Salary",
+        mr: "पगार."
+    },
+    salarydtl: {
+        en: "10,50,000 LPA",
+        mr: "१०,५०,००० लाख प्रतिवर्ष"
+    },
+
     labelRelations: {
         en:"Relatives",
         mr:"नातेसंबंध",
@@ -161,8 +179,8 @@ var translations = {
         mr: "मोबाईल क्र."
     },
     mobileNo:{
-        en:"+91 9284906112",
-        mr:"+९१ ९२८४९०६११२"
+        en:"+91 9833965415",
+        mr:"+९१ ९८३३९६५४१५"
     },
     translationKey: {
         en: "Hello, world!",
@@ -191,18 +209,18 @@ document.addEventListener('DOMContentLoaded', function () {
     // }
 
 
-    //To Set Marathi as defualt Language   ------Uncommet 4 lines
-        // checkBox.checked = true;
-        // translateLang('mr');
-        // checkboxText.innerHTML = "म";
-        // checkboxText.className = "lngEn slider round";
+    // To Set Marathi as defualt Language   ------Uncommet 4 lines
+        checkBox.checked = true;
+        translateLang('mr');
+        checkboxText.innerHTML = "म";
+        checkboxText.className = "lngEn slider round";
 
 
     //To Set Marathi as defualt Language   ------Uncommet 4 lines
-        checkBox.checked = false;
-        translateLang('en');
-        checkboxText.innerHTML = "En";
-        checkboxText.className = "lngMr slider round";
+        // checkBox.checked = false;
+        // translateLang('en');
+        // checkboxText.innerHTML = "En";
+        // checkboxText.className = "lngMr slider round";
 
 
     // Need to Run always when page loads
@@ -284,21 +302,22 @@ function redirectToGoogleMAp(link) {
 
 // to downoad PDF
 function downloadPDF() {
+    window.print();
     // Select the element containing the content you want to convert to PDF
-    const element = document.getElementById('content');
+    // const element = document.getElementById('content');
 
     // Set PDF options
-    const pdfOptions = {
-        margin: 10,
-        filename: 'Biodata.pdf', // Set a custom name for the PDF file
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 3 },
-        // jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-        pagebreak: { mode: 'avoid-all', before: '.page-break' }, // Configure page breaks
-    };
+    // const pdfOptions = {
+    //     margin: 5,
+    //     filename: 'Biodata.pdf', // Set a custom name for the PDF file
+    //     image: { type: 'jpeg', quality: 0.98 },
+    //     html2canvas: { scale: 3 },
+    //     jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+    //     // pagebreak: { mode: 'avoid-all', before: '.page-break' }, // Configure page breaks
+    // };
 
     // Use html2pdf library to generate PDF with options and save
-    html2pdf().from(element).set(pdfOptions).save();
+    // html2pdf().from(element).set(pdfOptions).save();
 }
 
 
