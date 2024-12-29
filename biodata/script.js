@@ -325,7 +325,11 @@ function downloadPDF() {
 // Add an array of profile photo URLs
 var profilePhotos = [
     "../assets/img/IMG-20240106-WA0008.png",
-    "../assets/img/IMG-20231230-WA0036.jpg", // Add more photo URLs as needed
+    "../assets/img/IMG-20231230-WA0036.jpg",
+    "../assets/img/Ankit_1.jpeg",
+    "../assets/img/Ankit_2.jpeg",
+    "../assets/img/Ankit_3.jpeg",
+    "../assets/img/Ankit_4.jpeg" // Add more photo URLs as needed
 ];
 
 var currentProfilePhotoIndex = 0; // Index of the current profile photo
