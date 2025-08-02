@@ -32,59 +32,78 @@
 
 <body>
     <div id="content">
+    <!-- Theme and Language Controls -->
+    <div class="controls-panel" id="controlsPanel">
+        <!-- Theme Selector -->
+        <div class="theme-selector">
+            <span class="control-label">Theme</span>
+            <div class="theme-options">
+                <button class="theme-btn active" data-theme="cyber" onclick="changeTheme('cyber')" title="Cyber Theme">
+                    <span class="theme-preview cyber-preview"></span>
+                    <span class="theme-name">Cyber</span>
+                </button>
+                <button class="theme-btn" data-theme="sunset" onclick="changeTheme('sunset')" title="Sunset Theme">
+                    <span class="theme-preview sunset-preview"></span>
+                    <span class="theme-name">Sunset</span>
+                </button>
+                <button class="theme-btn" data-theme="ocean" onclick="changeTheme('ocean')" title="Ocean Theme">
+                    <span class="theme-preview ocean-preview"></span>
+                    <span class="theme-name">Ocean</span>
+                </button>
+                <button class="theme-btn" data-theme="forest" onclick="changeTheme('forest')" title="Forest Theme">
+                    <span class="theme-preview forest-preview"></span>
+                    <span class="theme-name">Forest</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Enhanced Language Toggle -->
+        <div class="language-toggle">
+            <span class="control-label">Language</span>
+            <div class="toggle-container">
+                <button class="lang-btn active" data-lang="en" onclick="changeLanguage('en')">
+                    <i class="icofont-flag-alt-1"></i>
+                    <span>EN</span>
+                </button>
+                <button class="lang-btn" data-lang="mr" onclick="changeLanguage('mr')">
+                    <i class="icofont-flag-alt-2"></i>
+                    <span>मराठी</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
     <header>
-        <label class="switch">
-            <input type="checkbox" id="languageCheck" onclick="myFunction()">
-            <span class="slider round" id="checkboxText"></span>
-            <!-- <span >Off</span> -->
-        </label>
-        <img id="profilePhoto" src="../assets/img/IMG-20240106-WA0008.png" alt="Profile Photo" onclick="showLargerPhoto()" title="Click to view">
-        <!-- <div class="profile-container">
-            <img id="profilePhoto" src="../assets/img/IMG-20240106-WA0008.png" alt="Profile Photo" onclick="showLargerPhoto()" title="Click to view">
-            <div class="social-media-icons">
-              <a href="https://www.facebook.com/" target="_blank" title="Facebook">
-                <i class="icofont-facebook"></i>
-              </a>
-              <a href="https://www.twitter.com/" target="_blank" title="Twitter">
-                <i class="icofont-twitter"></i>
-              </a>
-              <a href="https://www.instagram.com/" target="_blank" title="Instagram">
-                <i class="icofont-instagram"></i>
-              </a>
-              <a href="https://www.linkedin.com/" target="_blank" title="LinkedIn">
-                <i class="icofont-linkedin"></i>
-              </a>
+        <!-- Mobile Menu Button - Inside Header -->
+        <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-          </div> -->
-
-          <!-- <div class="profile-container" onclick="showLargerPhoto()" title="Click to view">
-            <img id="profilePhoto" src="../assets/img/IMG-20240106-WA0008.png" alt="Profile Photo" >
-            <div class="profile-icons">
-                <a href="https://facebook.com" target="_blank"><i class="icofont-brand-whatsapp"></i></a>
-                <a href="https://facebook.com" target="_blank"><i class="icofont-facebook"></i></a>
-                <a href="https://twitter.com" target="_blank"><i class="icofont-twitter"></i></a>
-                <a href="https://instagram.com" target="_blank"><i class="icofont-instagram"></i></a>
-                <a href="https://linkedin.com" target="_blank"><i class="icofont-linkedin"></i></a>
-            </div>
-        </div> -->
+        </div>
         
-        <h1 data-translation-key="name"></h1>
-        <h3 data-translation-key="designation"></h3>
-
-
-        <!-- Add buttons to swap profile photos -->
-        <!-- <button onclick="changeProfilePhoto('prev')" id="prevPhotoButton" title="Previous Photo">
-            <i class="icofont-arrow-left"></i>
-        </button>
-
-        <button onclick="changeProfilePhoto('next')" id="nextPhotoButton" title="Next Photo">
-            <i class="icofont-arrow-right"></i>
-        </button> -->
-
-<!-- Add a button to switch between different sets of images -->
-<!-- <button onclick="switchImageSet()" id="switchImageButton" title="Switch Profile Photo Set">
-    <i class="icofont-refresh"></i>
-</button> -->
+        <div class="profile-section">
+            <img id="profilePhoto" src="../assets/img/IMG-20240106-WA0008.png" alt="Profile Photo" onclick="showLargerPhoto()" title="Click to view">
+            <div class="profile-info">
+                <h1 data-translation-key="name"></h1>
+                <h3 data-translation-key="designation"></h3>
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">26</span>
+                        <span class="stat-label">Years</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Dedicated</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
 
     <div id="largerProfilePhotoContainer" onclick="hideLargerPhoto()">

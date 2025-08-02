@@ -387,6 +387,80 @@ function stopAutoSlide() {
     clearInterval(autoSlideInterval);
 }
 
+// Theme and Language Management Functions
+function changeTheme(themeName) {
+    // Remove active class from all theme buttons
+    document.querySelectorAll('.theme-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    
+    // Add active class to selected theme button
+    document.querySelector(`[data-theme="${themeName}"]`).classList.add('active');
+    
+    // Apply theme to body
+    document.body.setAttribute('data-theme', themeName);
+    
+    // Save theme preference
+    localStorage.setItem('selectedTheme', themeName);
+    
+    // Add animation effect
+    document.body.style.transition = 'all 0.5s ease';
+    setTimeout(() => {
+        document.body.style.transition = '';
+    }, 500);
+}
+
+function changeLanguage(language) {
+    // Remove active class from all language buttons
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    
+    // Add active class to selected language button
+    document.querySelector(`[data-lang="${language}"]`).classList.add('active');
+    
+    // Translate content
+    translateLang(language);
+    
+    // Save language preference
+    localStorage.setItem('selectedLanguage', language);
+}
+
+// Load saved preferences on page load
+function loadPreferences() {
+    const savedTheme = localStorage.getItem('selectedTheme') || 'cyber';
+    const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+    
+    changeTheme(savedTheme);
+    changeLanguage(savedLanguage);
+}
+
+// Initialize preferences when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    loadPreferences();
+});
+
+// Mobile Menu Toggle Function
+function toggleMobileMenu() {
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const controlsPanel = document.getElementById('controlsPanel');
+    
+    mobileMenuBtn.classList.toggle('active');
+    controlsPanel.classList.toggle('active');
+}
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', function(event) {
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const controlsPanel = document.getElementById('controlsPanel');
+    
+    // Check if click is outside both the menu button and controls panel
+    if (!mobileMenuBtn.contains(event.target) && !controlsPanel.contains(event.target)) {
+        mobileMenuBtn.classList.remove('active');
+        controlsPanel.classList.remove('active');
+    }
+});
+
 // Initial delay before starting auto-slide
 startAutoSlide();
 // var profilePhotos = [
