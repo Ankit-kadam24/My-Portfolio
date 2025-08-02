@@ -32,49 +32,8 @@
 
 <body>
     <div id="content">
-    <!-- Theme and Language Controls -->
-    <div class="controls-panel" id="controlsPanel">
-        <!-- Theme Selector -->
-        <div class="theme-selector">
-            <span class="control-label">Theme</span>
-            <div class="theme-options">
-                <button class="theme-btn active" data-theme="cyber" onclick="changeTheme('cyber')" title="Cyber Theme">
-                    <span class="theme-preview cyber-preview"></span>
-                    <span class="theme-name">Cyber</span>
-                </button>
-                <button class="theme-btn" data-theme="sunset" onclick="changeTheme('sunset')" title="Sunset Theme">
-                    <span class="theme-preview sunset-preview"></span>
-                    <span class="theme-name">Sunset</span>
-                </button>
-                <button class="theme-btn" data-theme="ocean" onclick="changeTheme('ocean')" title="Ocean Theme">
-                    <span class="theme-preview ocean-preview"></span>
-                    <span class="theme-name">Ocean</span>
-                </button>
-                <button class="theme-btn" data-theme="forest" onclick="changeTheme('forest')" title="Forest Theme">
-                    <span class="theme-preview forest-preview"></span>
-                    <span class="theme-name">Forest</span>
-                </button>
-            </div>
-        </div>
-
-        <!-- Enhanced Language Toggle -->
-        <div class="language-toggle">
-            <span class="control-label">Language</span>
-            <div class="toggle-container">
-                <button class="lang-btn active" data-lang="en" onclick="changeLanguage('en')">
-                    <i class="icofont-flag-alt-1"></i>
-                    <span>EN</span>
-                </button>
-                <button class="lang-btn" data-lang="mr" onclick="changeLanguage('mr')">
-                    <i class="icofont-flag-alt-2"></i>
-                    <span>मराठी</span>
-                </button>
-            </div>
-        </div>
-    </div>
-
     <header>
-        <!-- Mobile Menu Button - Inside Header -->
+        <!-- Mobile Menu Button - Now inside header -->
         <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
             <div class="hamburger">
                 <span></span>
@@ -82,15 +41,56 @@
                 <span></span>
             </div>
         </div>
-        
+
+        <!-- Theme and Language Controls -->
+        <div class="controls-panel" id="controlsPanel">
+            <!-- Theme Selector -->
+            <div class="theme-selector">
+                <span class="control-label">Theme</span>
+                <div class="theme-options">
+                    <button class="theme-btn active" data-theme="cyber" onclick="changeTheme('cyber')" title="Cyber Theme">
+                        <span class="theme-preview cyber-preview"></span>
+                        <span class="theme-name">Cyber</span>
+                    </button>
+                    <button class="theme-btn" data-theme="sunset" onclick="changeTheme('sunset')" title="Sunset Theme">
+                        <span class="theme-preview sunset-preview"></span>
+                        <span class="theme-name">Sunset</span>
+                    </button>
+                    <button class="theme-btn" data-theme="ocean" onclick="changeTheme('ocean')" title="Ocean Theme">
+                        <span class="theme-preview ocean-preview"></span>
+                        <span class="theme-name">Ocean</span>
+                    </button>
+                    <button class="theme-btn" data-theme="forest" onclick="changeTheme('forest')" title="Forest Theme">
+                        <span class="theme-preview forest-preview"></span>
+                        <span class="theme-name">Forest</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Enhanced Language Toggle -->
+            <div class="language-toggle">
+                <span class="control-label">Language</span>
+                <div class="toggle-container">
+                    <button class="lang-btn active" data-lang="en" onclick="changeLanguage('en')">
+                        <i class="icofont-flag-alt-1"></i>
+                        <span>EN</span>
+                    </button>
+                    <button class="lang-btn" data-lang="mr" onclick="changeLanguage('mr')">
+                        <i class="icofont-flag-alt-2"></i>
+                        <span>मराठी</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
         <div class="profile-section">
             <img id="profilePhoto" src="../assets/img/IMG-20240106-WA0008.png" alt="Profile Photo" onclick="showLargerPhoto()" title="Click to view">
             <div class="profile-info">
                 <h1 data-translation-key="name"></h1>
                 <h3 data-translation-key="designation"></h3>
-                <div class="profile-stats">
+                <!-- <div class="profile-stats">
                     <div class="stat-item">
-                        <span class="stat-number">26</span>
+                        <span class="stat-number" id="age">26</span>
                         <span class="stat-label">Years</span>
                     </div>
                     <div class="stat-item">
@@ -101,7 +101,7 @@
                         <span class="stat-number">100%</span>
                         <span class="stat-label">Dedicated</span>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </header>

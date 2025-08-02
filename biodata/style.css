@@ -138,12 +138,12 @@ body::before {
 
 .mobile-menu-btn.active .hamburger span:nth-child(3) {
   transform: rotate(-45deg) translate(7px, -6px);
-}
+        }
 
 /* Controls Panel */
 .controls-panel {
-  position: fixed;
-  top: 20px;
+  position: absolute;
+  top: 80px;
   right: 20px;
   display: flex;
   flex-direction: column;
@@ -232,11 +232,11 @@ body::before {
 
 .sunset-preview {
   background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%);
-}
+        }
 
 .ocean-preview {
   background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-}
+        }
 
 .forest-preview {
   background: linear-gradient(135deg, #56ab2f 0%, #a8e6cf 100%);
@@ -256,7 +256,7 @@ body::before {
 .toggle-container {
   display: flex;
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
+            border-radius: 8px;
   padding: 4px;
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -287,11 +287,11 @@ body::before {
   background: var(--primary-gradient);
   color: white;
   box-shadow: 0 0 15px rgba(102, 126, 234, 0.4);
-}
+        }
 
 .lang-btn i {
   font-size: 0.9rem;
-}
+        }
 
 /* Header Section */
 header {
@@ -305,14 +305,14 @@ header {
   border: 1px solid var(--border-glow);
   box-shadow: var(--shadow-glow);
   animation: slideInDown 1s ease-out;
-  overflow: visible; /* Allow menu button to be visible outside header */
-}
+  overflow: visible;
+        }
 
 @keyframes slideInDown {
   from {
     opacity: 0;
     transform: translateY(-50px);
-  }
+        }
   to {
     opacity: 1;
     transform: translateY(0);
@@ -716,7 +716,7 @@ td[onclick]:hover::after {
   }
   
   header {
-    padding: 20px 15px;
+    padding: 15px 10px;
   }
   
   h1 {
@@ -770,15 +770,11 @@ td[onclick]:hover::after {
     right: 15px;
   }
   
-  header {
-    padding: 15px 10px;
-  }
-  
   .hamburger span {
     width: 18px;
     height: 2px;
-  }
-  
+}
+
   .controls-panel {
     top: 70px;
     right: 15px;
@@ -811,8 +807,8 @@ td[onclick]:hover::after {
   
   h3 {
     font-size: 1rem;
-  }
-  
+}
+
   #profilePhoto {
     width: 120px;
     height: 120px;
@@ -821,7 +817,7 @@ td[onclick]:hover::after {
   header {
     padding: 15px 10px;
   }
-  
+
   .profile-stats {
     gap: 15px;
     padding: 12px;
@@ -830,7 +826,7 @@ td[onclick]:hover::after {
   .stat-number {
     font-size: 1.2rem;
   }
-  
+
   .stat-label {
     font-size: 0.7rem;
   }
@@ -839,7 +835,7 @@ td[onclick]:hover::after {
     padding: 12px 15px;
     font-size: 0.8rem;
   }
-  
+
   #pdfButton {
     width: 55px;
     height: 55px;

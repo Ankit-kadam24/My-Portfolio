@@ -1257,10 +1257,10 @@ body {
 
 @media screen and (max-width: 600px) {
   .close {
-    top: 5px;
+      top: 5px;
     right: 10px;
     width: 45px;
     height: 45px;
-    font-size: 30px;
+      font-size: 30px;
   }
 }
