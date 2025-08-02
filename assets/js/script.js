@@ -47,6 +47,18 @@ document.addEventListener('DOMContentLoaded', function () {
     lightbox.innerHTML = '<span class="close" onclick="closeLightbox()">&times;</span><div class="lightbox-content"><img id="lightbox-image"></div>';
     document.body.appendChild(lightbox);
 
+    // Enhanced certificate gallery click events
+    var certificateCards = document.querySelectorAll('.certificate-card');
+    certificateCards.forEach(function (card) {
+        card.addEventListener('click', function () {
+            var img = card.querySelector('img');
+            if (img) {
+                openLightbox(img.src);
+            }
+        });
+    });
+
+    // Legacy gallery items (if any)
     var galleryItems = document.querySelectorAll('.gallery-item');
     galleryItems.forEach(function (item) {
         item.addEventListener('click', function () {
