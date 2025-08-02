@@ -64,13 +64,29 @@ var translations = {
         en:"At. Kadoli, Post. Govare, Tal. Patan, Dist. Satara, Maharashtra - 415207",
         mr:"मु. काडोली, पो. गोवारे, ता. पाटण, जी. सातारा, महाराष्ट्र - ४१५२०७",
     },
+    labelVillageProprty: {
+        en:"Village Property",
+        mr:"गावी जमीन",
+    },
+    villageProperty: {
+        en:"2 acres irrigated, 2.5 acres arable.",
+        mr:"२ एकर बागायती, २.५ एकर जिरायती.",
+    },
     labelAddress: {
         en:"Current Address",
         mr:"सध्याचा पत्ता",
     },
     address: {
-        en:"Flat no. 26, B Wing, Second Floor, Om Shruti C.H.S.L., Sainath Nagar, Near Shanti nagar, Tulinj Road, Nallasopara(E)-401209",
-        mr:"फ्लॅट क्र. २६, बी विंग, दुसरा मजला, ओम श्रुती कॉ.हो.सो.ली., साईनाथ नगर, शांती नगर जवळ, तुलिंज रोड, नालासोपारा(ई)-४०१२०९",
+        en:"Home 1:- Flat no. 26, B Wing, Second Floor, Om Shruti C.H.S.L., Sainath Nagar, Near Shanti nagar, Tulinj Road, Nallasopara(E)-401209",
+        mr:"घर १:- फ्लॅट क्र. २६, बी विंग, दुसरा मजला, ओम श्रुती कॉ.हो.सो.ली., साईनाथ नगर, शांती नगर जवळ, तुलिंज रोड, नालासोपारा(ई)-४०१२०९",
+    },
+    labelAddress2: {
+        en:"Current Address",
+        mr:"सध्याचा पत्ता",
+    },
+    address2: {
+        en:"Home 2:- R.no: 201, Jain Niwas Apt., Near Tulinj Auto stand, Tulinj Road, Nallasopara(E)-401209",
+        mr:"घर २:- रु.नं.: २०१, जैन  निवास, तुळींज रिक्षा स्टॅन्ड जवळ, तुळींज रोड, नालासोपारा(ई)-४०१२०९",
     },
     labelEdu: {
         en:"Education",
@@ -85,8 +101,8 @@ var translations = {
         mr:"उंची आणि रंग",
     },
     heightColor: {
-        en:"5 ft. 2 inc, Fair",
-        mr:"5 फूट 2 इंच, गोरा",
+        en:"5 ft. 4 inc, Fair",
+        mr:"5 फूट 4  इंच, गोरा",
     },
     labelFatherName: {
         en:"Father Name",
@@ -125,8 +141,8 @@ var translations = {
         mr:"सौ. स्वप्नाली निलेश पवार (विवाहित)"
     },
     sisterTwo: {
-        en:"Miss. Suvarna Sitaram Kadam (unmarried)",
-        mr:"कु. सुवर्णा सिताराम कदम (अविवाहित)"
+        en:"Mrs. Suvarna Vivek Desai (Married)",
+        mr:"सौ. सुवर्णा विवेक देसाई (विवाहित)"
     },
     sisterThree: {
         en:"Miss. Swarupa Sitaram Kadam (unmarried)",
